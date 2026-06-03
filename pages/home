@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatsF1</title>
+
+    <!-- FIXED PATHS -->
+    <link rel="stylesheet" href="../style/homeStyle.css">
+    <script src="../scripts/latest.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>StatsF1</h1>
+
+        <!-- Corrected links -->
+        <a href="seasons.html">
+            <button>Seasons</button>
+        </a>
+
+        <a href="races.html">
+            <button>Races</button>
+        </a>
+
+        <a href="drivers.html">
+            <button>Drivers</button>
+        </a>
+
+        <a href="constructors.html">
+            <button>Constructors</button>
+        </a>
+    </header>
+
+    <main>
+        <p id="output-message"></p>
+        <div id="results-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Site</p>
+    </footer>
+
+</body>
+
+</html>

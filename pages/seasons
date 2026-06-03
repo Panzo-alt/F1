@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Results - StatsF1</title>
+
+    <!-- FIXED PATHS -->
+    <link rel="stylesheet" href="../style/seasonsStyle.css">
+    <script src="../scripts/seasons.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>StatsF1</h1>
+
+        <!-- Corrected link -->
+        <a href="home.html">
+            <button>Home</button>
+        </a>
+
+        <label for="season-select">Select an F1 Season:</label>
+        <select id="season-select">
+            <option value="" disabled selected>Loading seasons...</option>
+        </select>
+
+        <button id="view-results-button" disabled>View Results</button>
+    </header>
+
+    <main>
+        <p id="output-message"></p>
+
+        <div id="results-container">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Site</p>
+    </footer>
+
+</body>
+
+</html>
