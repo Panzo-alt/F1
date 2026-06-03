@@ -7,15 +7,14 @@
     <title>StatsF1</title>
 
     <!-- FIXED PATHS -->
-    <link rel="stylesheet" href="../style/homeStyle.css">
-    <script src="../scripts/latest.js" defer></script>
+    <link rel="stylesheet" href="\styles\homeStyle.css">
+    <script src="\scripts\latest.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>StatsF1</h1>
 
-        <!-- Corrected links -->
         <a href="seasons.html">
             <button>Seasons</button>
         </a>
