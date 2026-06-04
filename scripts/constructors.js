@@ -64,8 +64,10 @@
       if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
 
       const data = await response.json();
-      const standings = data.MRData.StandingsTable.StandingsLists[0]?.ConstructorStandings || [];
-      
+      const standings =
+        data.MRData.StandingsTable.StandingsLists[0]?.ConstructorStandings ||
+        [];
+
       // Handle the case where a season (like a future year) has no data yet
       if (standings.length === 0) {
         seasonDiv.innerHTML = `<p>No constructor standings found for ${selectedSeason}.</p>`;
@@ -89,11 +91,16 @@
       `;
 
       // Loop through the standings array and create a row for each team
-      standings.forEach(standing => {
+      // Loop through the standings array and create a row for each constructor
+      standings.forEach((standing) => {
         tableHTML += `
             <tr>
               <td>${standing.position}</td>
-              <td><strong>${standing.Constructor.name}</strong></td>
+              <td>
+                <a href="${standing.Constructor.url}" target="_blank" rel="noopener noreferrer">
+                  <strong>${standing.Constructor.name}</strong>
+                </a>
+              </td>
               <td>${standing.points}</td>
               <td>${standing.wins}</td>
               <td>${standing.Constructor.nationality}</td>
@@ -109,7 +116,6 @@
 
       // Inject the completed HTML into the DOM
       seasonDiv.innerHTML = tableHTML;
-
     } catch (error) {
       console.error("Error fetching season results:", error);
       seasonDiv.innerHTML = `<p class="error">Error fetching results for ${selectedSeason}.</p>`;
@@ -118,7 +124,7 @@
   // 3. Initialize everything once the DOM is ready
   document.addEventListener("DOMContentLoaded", () => {
     populateSeasonsDropdown();
-    
+
     if (viewResultsButton) {
       viewResultsButton.addEventListener("click", processSelection);
     }

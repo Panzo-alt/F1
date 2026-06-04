@@ -90,11 +90,16 @@
       `;
 
       // Loop through the standings array and create a row for each driver
-      standings.forEach((standing) => {
+      // Loop through the standings array and create a row for each driver
+      standings.forEach(standing => {
         tableHTML += `
             <tr>
               <td>${standing.position}</td>
-              <td><strong>${standing.Driver.givenName} ${standing.Driver.familyName}</strong></td>
+              <td>
+                <a href="${standing.Driver.url}" target="_blank" rel="noopener noreferrer">
+                  <strong>${standing.Driver.givenName} ${standing.Driver.familyName}</strong>
+                </a>
+              </td>
               <td>${standing.points}</td>
               <td>${standing.wins}</td>
               <td>${standing.Driver.nationality}</td>

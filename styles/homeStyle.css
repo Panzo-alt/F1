@@ -6,26 +6,31 @@ header {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-button{
+nav {
+  margin-top: 10px;
+}
+
+button {
     background-color: #033e3e;
     color: #e5e4e2;
-    border: none;
+    border: 1px solid #e5e4e2; /* Added a subtle border so buttons stand out */
     padding: 10px 20px;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin: 0 5px;
+    border-radius: 4px; /* Slightly rounded corners */
 }
 
-label {
-  color: #e5e4e2;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+button:hover {
+    background-color: #055e5e; /* Subtle hover effect */
 }
 
 body {
   background-color: #e5e4e2;
   font-family: Arial, Helvetica, sans-serif;
   color: #033e3e;
+  padding-bottom: 80px; /* Prevents the fixed footer from hiding the bottom rows */
 }
 
 footer {
@@ -36,4 +41,86 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+/* --- TABLE STYLING --- */
+#season-results-area {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#season-results-area h2 {
+    text-align: center;
+    color: #15151e; 
+    margin-bottom: 1.5rem;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.standings-table th {
+    background-color: #15151e;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.standings-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333333;
+}
+
+.standings-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.standings-table tbody tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.standings-table tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+/* Link Styling */
+.standings-table td a {
+    color: #033e3e; 
+    text-decoration: none; 
+}
+
+.standings-table td a:hover {
+    text-decoration: underline; 
+    color: #15151e; 
+}
+
+/* Status Messages */
+.loading {
+    text-align: center;
+    color: #666666;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.error {
+    text-align: center;
+    color: #e10600; 
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #e10600;
+    border-radius: 4px;
+    background-color: #fde8e7;
 }
