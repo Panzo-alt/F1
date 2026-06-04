@@ -14,16 +14,19 @@
     <header>
         <h1>StatsF1</h1>
 
-        <!-- Corrected link -->
-        <a href="home.html">
-            <button>Home</button>
-        </a>
+        <nav>
+            <a href="home.html"><button>Home</button></a>
+            <a href="seasons.html"><button>Seasons</button></a>
+            <a href="drivers.html"><button>Drivers</button></a>
+            <a href="constructors.html"><button>Constructors</button></a>
+        </nav>
 
-        <label for="season-select">Select an F1 Season:</label>
+        <label for="season-select">Select an F1 season:</label>
         <select id="season-select">
-            <option value="" disabled selected>Loading seasons...</option>
+            <option value="" selected>Loading seasons...</option>
         </select>
 
+        <!-- ADDED 'disabled' attribute so the JS can enable it once data loads -->
         <button id="view-results-button" disabled>View Results</button>
     </header>
 

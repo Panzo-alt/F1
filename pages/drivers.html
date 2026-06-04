@@ -5,34 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StatsF1</title>
-
-    <!-- FIXED PATHS -->
-    <link rel="stylesheet" href="\styles\driverStyle.css">
+    
+    <link rel="stylesheet" href="/styles/driverStyle.css">
+    <script src="/scripts/driver.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>StatsF1</h1>
 
-        <a href="home.html">
-            <button>Home</button>
-        </a>
-        
-        <a href="seasons.html">
-            <button>Seasons</button>
-        </a>
+        <nav>
+            <a href="home.html"><button>Home</button></a>
+            <a href="seasons.html"><button>Seasons</button></a>
+            <a href="drivers.html"><button>Drivers</button></a>
+            <a href="constructors.html"><button>Constructors</button></a>
+        </nav>
 
-        <a href="races.html">
-            <button>Races</button>
-        </a>
+        <label for="season-select">Select an F1 season:</label>
+        <select id="season-select">
+            <option value="" selected>Loading seasons...</option>
+        </select>
 
-        <a href="drivers.html">
-            <button>Drivers</button>
-        </a>
-
-        <a href="constructors.html">
-            <button>Constructors</button>
-        </a>
+        <!-- ADDED 'disabled' attribute so the JS can enable it once data loads -->
+        <button id="view-results-button" disabled>View Results</button>
     </header>
 
     <main>

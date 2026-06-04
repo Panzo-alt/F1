@@ -26,6 +26,7 @@ body {
   background-color: #e5e4e2;
   font-family: Arial, Helvetica, sans-serif;
   color: #033e3e;
+  padding-bottom: 80px; 
 }
 
 footer {
@@ -36,4 +37,81 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+/* Center the results area and give it a clean font */
+#season-results-area {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#season-results-area h2 {
+    text-align: center;
+    color: #15151e; /* F1 dark theme color */
+    margin-bottom: 1.5rem;
+}
+
+/* Main Table Styling */
+.standings-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes double borders between cells */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the rounded corners apply to the header too */
+}
+
+/* Table Headers */
+.standings-table th {
+    background-color: #15151e;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+/* Table Cells */
+.standings-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333333;
+}
+
+/* Zebra Striping (Alternate row colors) */
+.standings-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.standings-table tbody tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+/* Remove the bottom border from the very last row */
+.standings-table tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+/* Status Messages (Loading/Error) */
+.loading {
+    text-align: center;
+    color: #666666;
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.error {
+    text-align: center;
+    color: #e10600; /* F1 Red */
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #e10600;
+    border-radius: 4px;
+    background-color: #fde8e7;
 }

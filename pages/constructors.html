@@ -6,41 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StatsF1</title>
 
-    <!-- FIXED PATHS -->
-    <link rel="stylesheet" href="\styles\constructorStyle.css">
-    <script src="\scripts\constructors.js" defer></script>
+    <link rel="stylesheet" href="/styles/constructorStyle.css">
+    <script src="/scripts/constructors.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>StatsF1</h1>
 
-        <a href="home.html">
-            <button>Home</button>
-        </a>
-        
-        <a href="seasons.html">
-            <button>Seasons</button>
-        </a>
+        <!-- Wrapped navigation in a semantic <nav> tag -->
+        <nav>
+            <a href="home.html"><button>Home</button></a>
+            <a href="seasons.html"><button>Seasons</button></a>
+            <a href="drivers.html"><button>Drivers</button></a>
+            <a href="constructors.html"><button>Constructors</button></a>
+        </nav>
 
-        <a href="races.html">
-            <button>Races</button>
-        </a>
-
-        <a href="drivers.html">
-            <button>Drivers</button>
-        </a>
-
-        <a href="constructors.html">
-            <button>Constructors</button>
-        </a>
-
-        <label for="constructor-select">Select an F1 Constructor:</label>
-        <select id="constructor-select">
-            <option value="" selected>Loading constructors...</option>
+        <label for="season-select">Select an F1 season:</label>
+        <select id="season-select">
+            <option value="" selected>Loading seasons...</option>
         </select>
 
-        <button id="view-results-button" >View Results</button>
+        <!-- ADDED 'disabled' attribute so the JS can enable it once data loads -->
+        <button id="view-results-button" disabled>View Results</button>
     </header>
 
     <main>
@@ -49,7 +37,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 My Site</p>
+        <p>&copy; 2026 My Site</p>
     </footer>
 
 </body>
